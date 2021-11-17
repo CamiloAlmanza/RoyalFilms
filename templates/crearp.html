@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear pelicula</title>
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap');
+     
+.formulario{
+    font-family: 'Roboto', sans-serif;
+}
+
+.formulario .a{
+    border-radius: 15px;
+    border: solid;
+    text-align: center;
+    color: white;
+    border:rgb(22, 22, 22) 1px solid;
+    background-color: rgb(0, 0, 46);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.formulario .b{
+    display: flex;
+    justify-content: center;
+    border:rgb(22, 22, 22) 1px solid;
+    border-radius: 15px;
+    text-align: center;
+    background-color: rgb(223, 223, 223);
+}
+
+.formulario .c{
+    justify-content: center;
+    border:rgb(22, 22, 22) 1px solid;
+    border-radius: 15px;
+    text-align: center;
+}
+input{
+    margin-right: 10px;
+    width: 200px;
+}
+    </style>
+</head>
+<body style="background-color: rgb(22, 22, 22);">
+    <div class="formulario">
+        <div class="a">
+            <header>
+                <h1>Crear película</h1>
+            </header>
+        </div>
+        <form action="/crearr" class="form" method ='POST'>
+        <div class="b">
+                <table class="default">
+                    <tr>
+                    <th>Nombre de la película</th>
+                    <th>Idioma</th>
+                    <th>Clasificación</th>
+                    <th>Duración</th>
+                    <th>Fecha de estreno</th>
+
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="nombrep" id=""></td>
+                        <td><input type="text" name="language" id=""></td>
+                        <td><input type="text" name="clasi" id=""></td>
+
+                        <td><input type="text" name="tiempo" id="" ></td>
+                        <td><input type="text" name="fecha" id="" ></td>
+                    </tr>
+                    <tr>
+                        <br><br>
+                        <th>url del tráiler</th>
+                        <th>Sinopsis</th>
+                        <th>Director de la película</th>
+                        <th>Reparto de la película</th>
+                    </tr>
+                    <tr>                        
+                        <td><input type="text" name="url" id="" ></td>
+                        <td><textarea name="sinopsis" rows="5" cols="25"></textarea>
+                        </td>
+                        <td><input type="text" name="director" id="" ></td>
+                        <td><input type="text" name="reparto" id="" ></td>
+                    </tr>
+                </table>
+         </div>
+         <div class="c">
+            <a><input class="form_submit" type="submit" value="Crear pelicula" name="crearregistro"></a>
+            
+            <a href="volver"><input type="button" value="Regresar" name="regresar"></a>
+         </div>
+        </form>
+    </div>
+    
+</body>
+</html>

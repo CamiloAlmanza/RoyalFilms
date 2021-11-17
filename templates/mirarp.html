@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado peliculas</title>
+</head>
+<body style="background-color: rgb(65, 65, 65);">
+            <header style="text-align: center;">
+                <h1 style="color: rgb(238, 236, 255);">Listado Peliculas</h1>
+            </header>
+        <form action="/mirarp" class="form" method ='GET'>
+            <table style="margin: 0 auto;">
+            <tr>
+                <th style="color: rgb(238, 236, 255);">Nombre de la película</th>
+                <th style="color: rgb(238, 236, 255);">Clasificación</th>
+                <th style="color: rgb(238, 236, 255);">Fecha de estreno</th>
+            </tr>
+            {% for r in row %}
+            <tr>
+                <td><input readonly type="text" name="nombrep" id="" placeholder='{{ r["nombre_pelicula"] }}'></td>
+                <td><input readonly type="text" name="clasi" id="" placeholder='{{ r["clasificacion"] }}'></td>
+                <td><input readonly type="text" name="fecha" id="" placeholder='{{ r["fecha_estreno"] }}'></td>
+
+                <td><a href="{{url_for('editarp',nombre_pelicula=r['nombre_pelicula'])}}"><input type="button" value="Editar" id="Editar"></a></td>
+                <td><a href="{{url_for('eliminarp',nombre_pelicula=r['nombre_pelicula'])}}"><input type="button" value="Eliminar" id="Eliminar"></a></td>
+            </tr>
+            {% endfor%}
+            </table>
+            <br><br>
+            <div style="text-align: center;">
+            <a href="volver"><input type="button" value="Regresar" name="regresar"></a>
+            </div>      
+</body>
+</html>
